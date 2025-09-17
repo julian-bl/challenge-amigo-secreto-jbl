@@ -4,7 +4,7 @@ let amigos = [];
 function agregarAmigo(){
     let nombre = document.getElementById('amigo').value;
 
-    //verificamos que el campo de texto no se encuentre vacio al momento de que el usario haga click sobre el boton "Añadir"
+    //verificamos que el campo de texto no se encuentre vacío al momento de que el usario haga click sobre el boton "Añadir"
     if (nombre === "") {
       alert("Por favor, inserte un nombre.");
 
@@ -32,16 +32,16 @@ function enlistarAmigos() {
 }
 
 function sortearAmigo () {
-    //verificamos que el array no se encuentre vacio.
+    //verificamos que el array no se encuentre vacío.
     if (amigos.length > 0){
-    //Limpiamos todos <li> que generamos dentro del <ul> en la funcion enlistarAmigos() para mostrar el mensaje del amigo sorteado de manera mas limpia.    
+    //Limpiamos todos <li> que generamos dentro del <ul> en la función enlistarAmigos() para mostrar el mensaje del amigo sorteado de manera mas limpia.    
     document.getElementById('listaAmigos').innerHTML = '';
     
-    //Generamos un indice aleatorio del array.
+    //Generamos un índice aleatorio del array.
     let indiceAmigo = Math.floor(Math.random()*amigos.length);
     console.log(indiceAmigo);
-    
-    //Modificamos el elemento de HTML mostrando el resultado del sorteo, utilizando el indice generado previamente.
+
+    //Modificamos el elemento de HTML mostrando el resultado del sorteo, utilizando el índice generado previamente.
     let sorteo = document.getElementById('resultado');
     sorteo.innerHTML = `El amigo secreto sorteado es: ${amigos[indiceAmigo]}`;
 
