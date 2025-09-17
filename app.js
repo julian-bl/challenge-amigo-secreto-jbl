@@ -12,12 +12,13 @@ function agregarAmigo(){
         amigos.push(nombre);
         //Verificamos que los nombres se esten añadiendo al array.
         console.log(amigos);
-        enlistarAmigos();
+        
         //limpiamos el campo de texto una vez introducido el nombre.
         document.getElementById('amigo').value = '';
-    }
+        enlistarAmigos();
+    }   
 } 
-
+//creamos una función que añada a un elemento en HTML los nombres ingreados por el usuario.
 function enlistarAmigos() {
     let listaNombresHTML = document.createElement('li');
 
