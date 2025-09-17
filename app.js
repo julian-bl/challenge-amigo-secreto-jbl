@@ -1,7 +1,6 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 let amigos = [];
 
-
 function agregarAmigo(){
     let nombre = document.getElementById('amigo').value;
 
@@ -25,9 +24,28 @@ function enlistarAmigos() {
     //limpiamos la lista para evitar que se agreguen nuevamente los nombres ya agregados previamente.
     listaNombresHTML.innerHTML = "";
 
-    //creamos un bucle que  añade los elemenos contenidos en el array listaDeAmigos, a un elemento en HTML.
+    //creamos un bucle que  añade los elemenos contenidos en el array amigos, a un elemento en HTML.
     for (let i = 0; i < amigos.length; i++) { 
     listaNombresHTML.textContent = amigos[i];
     document.getElementById("listaAmigos").appendChild(listaNombresHTML);
+    }
+}
+
+function sortearAmigo () {
+    //verificamos que el array no se encuentre vacio.
+    if (amigos.length > 0){
+    //Limpiamos todos <li> que generamos dentro del <ul> en la funcion enlistarAmigos() para mostrar el mensaje del amigo sorteado de manera mas limpia.    
+    document.getElementById('listaAmigos').innerHTML = '';
+    
+    //Generamos un indice aleatorio del array.
+    let indiceAmigo = Math.floor(Math.random()*amigos.length);
+    console.log(indiceAmigo);
+    
+    //Modificamos el elemento de HTML mostrando el resultado del sorteo, utilizando el indice generado previamente.
+    let sorteo = document.getElementById('resultado');
+    sorteo.innerHTML = `El amigo secreto sorteado es: ${amigos[indiceAmigo]}`;
+
+    } else {
+        alert('Por favor, digite un nombre antes de intentar sortear un amigo.');
     }
 }
