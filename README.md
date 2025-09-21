@@ -1,4 +1,8 @@
-# <center> Juego del amigo secreto 🎁
+<h1> <div align="center">
+  Juego del amigo secreto 🎁
+</div>
+</h1> 
+
 ![alt text](<assets/portadareadme.png>)
 #### Un pequeño proyecto que ofrece una solución simple a la organización del tan reconocido [juego](https://es.wikibooks.org/wiki/Juegos_populares/Amigo_secreto), permitiendo añadir tantos amigos como se desee, visualizarlos y realizar un sorteo aleatorio para elegir a un _Amigo secreto_
 ### ⚙️ Funcionalidades 
